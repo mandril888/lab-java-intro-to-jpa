@@ -9,13 +9,13 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-@Table(name = "flights")
-public class Flight {
+@Table(name = "aircrafts")
+public class Aircrafts {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int flightId;
-    private String flightNumber;
-    private int flightMileage;
-
+    private int aircraftId;
+    private String aircraft;
+    private int totalAircraftSeats;
 }
