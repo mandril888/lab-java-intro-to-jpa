@@ -10,7 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Table(name = "aircrafts")
-public class Aircrafts {
+public class Aircraft {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,4 +18,10 @@ public class Aircrafts {
     private int aircraftId;
     private String aircraft;
     private int totalAircraftSeats;
+
+    public Aircraft(String aircraft, int totalAircraftSeats) {
+        this.aircraft = aircraft;
+        this.totalAircraftSeats = totalAircraftSeats;
+    }
+
 }

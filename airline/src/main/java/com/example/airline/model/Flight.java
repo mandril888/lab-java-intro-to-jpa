@@ -18,4 +18,8 @@ public class Flight {
     private String flightNumber;
     private int flightMileage;
 
+    public Flight(String flightNumber, int flightMileage) {
+        this.flightNumber = flightNumber;
+        this.flightMileage = flightMileage;
+    }
 }

@@ -16,7 +16,13 @@ public class Customer {
     @Column(name = "id")
     private int customerId;
     private String customerName;
-    private String customerStatus;
+    @Enumerated(EnumType.STRING)
+    private CustomerStatus customerStatus;
     private int totalCustomerMileage;
 
+    public Customer(String customerName, CustomerStatus customerStatus, int totalCustomerMileage) {
+        this.customerName = customerName;
+        this.customerStatus = customerStatus;
+        this.totalCustomerMileage = totalCustomerMileage;
+    }
 }
